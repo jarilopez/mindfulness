@@ -1,10 +1,11 @@
-/* Header.css */
+
 .header-container {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
+  display: relatives;
+  align-items: center;
+  justify-content: space-between;
+  height: auto; /* Asegura que solo ocupe el espacio del contenido */
 }
+
 
 .header-content {
   display: flex;
@@ -23,7 +24,6 @@
   display: flex;
   gap: 2rem;
   align-items: center;
-  padding: 20px;
 }
 
 .nav-item {

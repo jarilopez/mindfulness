@@ -7,6 +7,7 @@ body {
   background: linear-gradient(180deg, #5888A6 0%, #FFFFFF 80%, #8BBBD9 100%);
   background-repeat: no-repeat; 
   background-size: cover; 
+  z-index: 0;
 }
 
 .home-page {
@@ -20,6 +21,7 @@ body {
   justify-content: center;
   text-align: center;
   height: 100vh; 
+  z-index: -1;
 }
 
 .title-home {
