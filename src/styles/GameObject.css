@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63);
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Contenedor principal */
+  .game-object-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Encabezado */
+  .game-header {
+    margin-bottom: 40px;
+  }
+  
+  .game-header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #6dd5ed;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(109, 213, 237, 0.7);
+  }
+  
+  .game-header p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-top: 10px;
+  }
+  
+  /* Selector de nivel */
+  .level-selector {
+    margin-top: 20px;
+  }
+  
+  .level-selector h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .level-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .level-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+  }
+  
+  .level-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  .level-1 {
+    background: #6dd5ed;
+    color: #000;
+  }
+  
+  .level-2 {
+    background: #ff9a9e;
+    color: #000;
+  }
+  
+  .level-3 {
+    background: #ff6f61;
+    color: #000;
+  }
+  
+  /* Pantalla de juego */
+  .game-screen {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .score-display {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .score-display span {
+    margin: 0 10px;
+    color: #6dd5ed;
+    font-weight: 600;
+  }
+  
+  /* Entorno 3D */
+  .three-d-environment {
+    width: 100%;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón de salir */
+  .quit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ff6f61;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: 600;
+  }
+  
+  .quit-button:hover {
+    background: #ff4757;
+    transform: scale(1.05);
+  }
+  
+  /* Pie de página */
+  .game-footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+  }
+  
+  /* Efectos de neón para un toque futurista */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgba(109, 213, 237, 0.7);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(109, 213, 237, 0.9);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(109, 213, 237, 0.7);
+    }
+  }
+  
+  .game-header h1 {
+    animation: glow 2s infinite;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .game-header h1 {
+      font-size: 2rem;
+    }
+  
+    .game-header p {
+      font-size: 1rem;
+    }
+  
+    .level-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .level-button {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .three-d-environment {
+      height: 300px;
+    }
+  }
