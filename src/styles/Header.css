@@ -1,14 +1,10 @@
 
 .header-container {
-  display: relatives;
-  align-items: center;
   justify-content: space-between;
-  height: auto; /* Asegura que solo ocupe el espacio del contenido */
 }
 
 
 .header-content {
-  display: flex;
   padding:20px; 
 }
 
@@ -21,9 +17,11 @@
 }
 
 .nav-menu {
-  display: flex;
+  display: inline-flex;
   gap: 2rem;
   align-items: center;
+  z-index: 12;
+  margin: 1rem;
 }
 
 .nav-item {

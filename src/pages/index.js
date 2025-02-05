@@ -42,7 +42,7 @@ const HomePage = () => {
         </div>
         <div
           className="card"
-          onClick={() => router.push('/breathing')}  // Redirige a /breathing
+          onClick={() => router.push('/BreathingPage')}  // Redirige a /breathing
           aria-label="Go to Breathing Exercise"
         >
           <div className="card-inner">

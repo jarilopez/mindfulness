@@ -1,185 +1,133 @@
-/* BreathingPage.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
-  --primary-blue: #5888A6;
-  --secondary-blue: #8BBBD9;
-  --light-blue: #FFFFFF;
-  --dark-blue: #486D84;
-  --glass-bg: rgba(88, 136, 166, 0.3);
-}
-
-body_breath {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #5888A6 0%, #FFFFFF 80%, #8BBBD9 100%);
-  color: var(--dark-blue);
-  min-height: 100vh;
+  --deep-forest: #102820;
+  --dark-green: #1b3a2b;
+  --lush-green: #2e5842;
+  --accent-green: #5a8a6a;
+  --misty-light: #d9e6df;
+  --soft-glow: rgba(255, 255, 255, 0.12);
+  --text-light: #f0f4f3;
+  --text-dark: #c0d6cc;
+  --moonlight: #e0e6e1;
 }
 
 .breath-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
-}
-
-.breath-content {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 24px;
-  padding: 2rem;
-  max-width: 800px;
+  background: linear-gradient(
+    180deg,
+    var(--deep-forest) 0%,
+    var(--accent-green) 55%,
+    var(--misty-light) 80%,
+    var(--dark-green) 100%
+  );
+  z-index: 0;
+  height: 100vh;
   width: 100%;
-  text-align: center;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .breath-title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 30px;
+  padding: 20px;
+  color: var(--text-light);
+  text-shadow: 0 0 15px var(--soft-glow);
+}
+
+.breath-subtitle {
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: var(--light-blue);
-  font-weight: lighter;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text-dark);
+  text-align: center;
+  font-weight: 300;
 }
 
 .technique-cards {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .technique-card {
-  position: relative;
+  background: rgba(30, 50, 40, 0.3);
+  border-radius: 1rem;
+  width: 300px;
   padding: 1.5rem;
-  border: 2px solid var(--light-blue);
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: var(--glass-bg);
-  overflow: hidden;
+  text-align: center;
+  color: var(--text-light);
+  transition: transform 0.3s ease;
 }
 
 .technique-card:hover {
   transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.technique-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.5rem;
-  color: var(--light-blue);
-}
-
-.technique-card p {
-  margin: 0;
-  color: var(--light-blue);
-  opacity: 0.9;
-}
-
-.duration-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.duration-btn {
-  padding: 1rem 2rem;
-  border: 2px solid var(--light-blue);
-  border-radius: 12px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--light-blue);
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.duration-btn:hover {
-  background-color: var(--light-blue);
-  color: var(--primary-blue);
-  transform: scale(1.05);
-}
-
-.breath-session {
-  margin-top: 2rem;
-}
-
-.breath-animation {
-  position: relative;
-  margin: 2rem auto;
-  width: 200px;
-  height: 200px;
-}
-
-.breath-circle {
-  width: 100%;
-  height: 100%;
-  border: 4px solid var(--light-blue);
-  border-radius: 50%;
-  animation: breath-pulse 8s infinite alternate;
-}
-
-@keyframes breath-pulse {
-  0% { transform: scale(0.9); }
-  100% { transform: scale(1.1); }
-}
-
-.start-btn {
-  padding: 1rem 2.5rem;
-  border: 2px solid var(--light-blue);
-  border-radius: 16px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--light-blue);
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.start-btn:hover {
-  background-color: var(--light-blue);
-  color: var(--primary-blue);
-  transform: scale(1.05);
-}
-
-.back-btn {
-  background: none;
+/* 🎇 Efecto holográfico en botones */
+.holographic-breath-btn {
+  background: linear-gradient(135deg, var(--button-color, rgba(12, 54, 30, 0.9)) 0%, var(--button-color, rgba(58, 86, 120, 0.9)) 100%);
   border: none;
-  color: var(--light-blue);
-  opacity: 0.7;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: opacity 0.3s ease;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  color: var(--moonlight);
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(81, 208, 153, 0.425);
 }
 
-.back-btn:hover {
-  opacity: 1;
+.holographic-breath-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.15) 50%, transparent 75%);
+  animation: btnShine 4s linear infinite;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .breath-content {
-    padding: 1rem;
-  }
-  
-  .breath-title {
-    font-size: 2rem;
-  }
-  
-  .technique-card h3 {
-    font-size: 1.3rem;
-  }
-  
-  .duration-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .duration-btn {
-    width: 100%;
-  }
+@keyframes btnShine {
+  0% { transform: rotate(0deg) translate(-25%, -25%); }
+  100% { transform: rotate(360deg) translate(-25%, -25%); }
 }
+
+.holographic-breath-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+.holographic-breath-btn:active {
+  transform: translateY(2px);
+}
+
+.breath-session{
+  margin: auto;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: space-around;
+  width: 40vw;  /* Ajusta el ancho */
+  height: 40vh; /* Ajusta la altura */
+  max-width: 300px; /* Máximo tamaño */
+  max-height: 5300px;
+  padding: 0rem;
+}
+
+/* 🌀 Tamaño y margen de la Sphere */
+.breath-sphere {
+  transform: scale(1.2); /* Ajusta el tamaño desde CSS */
+}
+
+.breath-instructions {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  gap: 5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: space-around;
+}
+

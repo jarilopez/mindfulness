@@ -7,47 +7,22 @@
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(
-    135deg,
-    #ADA8BE 0%,  /* Lavender Gray - un lila apagado y elegante */
-    #796A9F 50%, /* Muted Purple - un morado intermedio y sereno */
-    #5A496E 100% /* Deep Plum - un tono profundo y envolvente */
-);
-    
+        180deg, /* De arriba hacia abajo */
+        #493c57 0%,    /* Lavender Gray - un lila apagado y elegante */
+        #8c7baa87 35%,   /* Tono intermedio entre el lila y el morado */
+        #a89dba81 65%,   /* Suaviza la transición al tono claro */
+        #eeecef12 80%, /* Tono claro similar al blanco en el centro */
+        #65577c8d 90%,   /* Suaviza la transición al tono oscuro */
+        #3e265aa2 100%  /* Deep Plum - un tono profundo y envolvente */
+    );
     z-index: 0;
 }
 
-/* Efecto de partículas animadas */
-.visualization-page-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.2) 10%, /* Partículas más suaves */
-        transparent 10.01%
-    );
-    background-size: 20px 20px;
-    animation: moveParticles 10s linear infinite;
-    z-index: 1;
-}
-
-@keyframes moveParticles {
-    0% {
-        transform: translateY(0) translateX(0);
-    }
-    100% {
-        transform: translateY(-100%) translateX(-50%);
-    }
-}
 
 /* Contenido de la página */
 .visualization-page-container main {
     position: relative;
     z-index: 2; /* Asegura que el contenido esté por encima del fondo */
-    padding: 2rem;
     color: #4b0082; /* Color de texto oscuro para contraste */
 }
 
@@ -55,19 +30,23 @@
 .visualization-page-container .titles-games {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #22132d;
-    text-shadow: 0 0 10px rgba(18, 8, 26, 0.296); /* Sombra suave */
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.296); 
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+
 }
 
 /* Ajustes para el subtítulo */
 .visualization-page-container .subtitles-games {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: #281c3f; /* Lila medio para el subtítulo */
+    text-align: center;
+    color: #c1bec8; /* Lila medio para el subtítulo */
 }
 
 .visualization-page-container .names {
-    color: #3f2453;
+    color: #3e265a;
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -88,24 +67,25 @@
     background: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
     backdrop-filter: blur(10px);
     border-radius: 1rem;
-    padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    width: 600px;
+    height: 250px;
+    gap: 160px;
 }
 
 .visualization-page-container .game-card:hover {
-    transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(147, 112, 219, 0.3); /* Sombra lila */
 }
 
 /* Ajustes para los botones */
 .visualization-page-container .holographic-btn {
-    margin-top: 1.5rem;
+    margin: 1rem;
     background: linear-gradient(
     135deg,
     rgba(116, 90, 178, 0.9) 0%, /* Deep Violet */
-    rgba(95, 70, 155, 0.9) 100% /* Dark Plum */
+    rgba(66, 50, 105, 0.9) 100% /* Dark Plum */
 );
     border: none;
     padding: 1rem 2.5rem;
@@ -114,11 +94,12 @@
     font-size: 1.1rem;
     font-weight: 500;
     transition: all 0.3s ease;
+    display: inline-block;    
 }
 
 .visualization-page-container .holographic-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(147, 112, 219, 0.4); /* Sombra lila */
+    box-shadow: 0 10px 30px rgba(111, 89, 157, 0.4); /* Sombra lila */
 }
 
 .visualization-page-container .holographic-btn:active {

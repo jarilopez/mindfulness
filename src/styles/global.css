@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
-body{
-  overflow: hidden;
-}
 
 .titles-games{
   font-family: 'Raleway', sans-serif;
@@ -12,7 +9,6 @@ body{
   font-size: 48px;
   color: #2d404c;
   margin-bottom: 20px;
-  text-align: center;
   }
 
 .subtitles-games{
@@ -21,7 +17,6 @@ body{
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     font-size: 35px;
-    text-align: center;
 }
 
 .general-text{
@@ -34,6 +29,7 @@ body{
 
 .game-options{
     width: 50%;
+    float: left;
     border: #384e59;
     padding: 10px;
     justify-content: center;
@@ -65,21 +61,22 @@ body{
 
 .cards-horizontal-container {
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  gap: 60px;
-  margin: 10vh;
+  gap: 24px;
 }
 
 .game-card {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(16px);
   border-radius: 18px;
-  padding: 2.5rem;
+  padding: 1.5rem;
   border: 1px solid rgba(255,255,255,0.1);
   transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
 }
 
 .game-name {
@@ -98,27 +95,13 @@ body{
 }
 
 .game-card:hover {
+  transform: translateY(-6px);
   box-shadow: 
     0 8px 32px rgba(135, 206, 235, 0.15),
     inset 0 0 24px rgba(173, 216, 230, 0.1);
 }
 
-.game-card::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 25%,
-    rgba(173, 216, 230, 0.1) 50%,
-    transparent 75%
-  );
-  animation: cardFlow 12s linear infinite;
-  z-index: -1;
-}
+
 
 @keyframes cardFlow {
   0% { transform: rotate(0deg) translate(-25%, -25%); }
@@ -185,6 +168,16 @@ body{
   filter: brightness(0.95);
 }
 
+
+.gradient-canvas {
+    background: linear-gradient(
+      45deg,
+      #3a5678,
+      #6b8eaa,
+      #a0b9d1
+    );
+    opacity: 0.15;
+}
 
 
 

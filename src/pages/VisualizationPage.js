@@ -11,7 +11,7 @@ const VisualizationPage = () => {
       <Header logo="/logo.png" links={[]} />
       
       <main className="text-center">
-        <h2 className="titles-games">Dynamic Visualizations</h2>
+        <h2 className="titles-games">DYNAMIC VISUALITZACION</h2>
 
         <p className="subtitles-games">Select a calming visual pattern:</p>
 
